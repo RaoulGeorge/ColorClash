@@ -41,7 +41,7 @@ define(function (require) {
     };
 
     function checkCompliance(self){
-        console.log(self.bgRGBValue);
+        console.log(self.color.getLuminosity(self.bgRGBValue));
         console.log(self.fgRGBValue);
 
     }

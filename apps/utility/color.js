@@ -155,7 +155,7 @@ define(function (require) {
 	}
 
 	Color.prototype.hexToRGB = function (val) {
-		var r, g, b;
+		var r, g, b, result = [];
 	    if (val.charAt(0) == '#') {
 	        val = val.substr(1);
 	    }
@@ -165,8 +165,26 @@ define(function (require) {
 	    r = parseInt(r, 16);
 	    g = parseInt(g, 16);
 	    b = parseInt(b, 16);
-	    return 'rgb(' + r + ',' + g + ',' + b + ')';
+            result.push(r,g,b);
+
+	    return result;
 	};
+
+        Color.prototype.getLuminosity = function (val) {
+                var rgba = val.slice();
+
+                for(var i=0; i<3; i++) {
+                        var rgb = rgba[i];
+
+                        rgb /= 255;
+
+                        rgb = rgb < .03928 ? rgb / 12.92 : Math.pow((rgb + .055) / 1.055, 2.4);
+
+                        rgba[i] = rgb;
+                }
+
+                return .2126 * rgba[0] + .7152 * rgba[1] + 0.0722 * rgba[2];
+        }
 
 
 	return Color;
