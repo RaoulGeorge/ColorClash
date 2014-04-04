@@ -41,8 +41,11 @@ define(function (require) {
     };
 
     function checkCompliance(self){
-        console.log(self.color.getLuminosity(self.bgRGBValue));
+        var l1 = self.color.getLuminosity(self.bgRGBValue);
+        var l2 = self.color.getLuminosity(self.fgRGBValue);
         console.log(self.fgRGBValue);
+
+        console.log('contrast = ' + self.color.getContrast(l1, l2));
 
     }
 

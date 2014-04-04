@@ -182,9 +182,22 @@ define(function (require) {
 
                         rgba[i] = rgb;
                 }
-
                 return .2126 * rgba[0] + .7152 * rgba[1] + 0.0722 * rgba[2];
-        }
+        };
+
+        Color.prototype.getContrast = function (val1, val2) {
+
+
+                var l1 = val1 + .05,
+                        l2 = val2 + .05,
+                        ratio = l1/l2;
+
+                if (l2 > l1) {
+                        ratio = 1 / ratio;
+                }
+                ratio = Math.round(ratio, 1);
+                return ratio;
+        };
 
 
 	return Color;
