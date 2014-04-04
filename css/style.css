@@ -23,8 +23,11 @@ body {
 }
 
 .single-output-container {
-	width: 45%;
+	margin-top: 25px;
+	width: 506px;
 	height: 300px;
 	border: 1px solid gray;
 	display: inline-block;
+	padding: 200px;
+	font-size: 50px;
 }
