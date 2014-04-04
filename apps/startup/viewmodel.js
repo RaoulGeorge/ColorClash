@@ -45,7 +45,7 @@ define(function (require) {
         var l2 = self.color.getLuminosity(self.fgRGBValue);
         console.log(self.fgRGBValue);
 
-        console.log('contrast = ' + self.color.getContrast(l1, l2));
+        console.log('contrast =' + self.color.getContrast(l1, l2));
 
     }
 
