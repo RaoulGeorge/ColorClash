@@ -6,3 +6,18 @@ body {
 	
 }
 
+.app-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 20px;
+	padding-left: 20px;
+	width: 600px;
+	margin: auto;
+	margin-top: 30px;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+.input-control {
+	width: 45%;
+}
