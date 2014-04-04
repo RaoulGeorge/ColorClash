@@ -21,3 +21,10 @@ body {
 .input-control {
 	width: 45%;
 }
+
+.single-output-container {
+	width: 45%;
+	height: 300px;
+	border: 1px solid gray;
+	display: inline-block;
+}

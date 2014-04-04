@@ -5,7 +5,8 @@ define(function (require) {
 
     function viewmodel() {
         console.log('viewmodel constructor');
-        
+        leftBackground = ko.observable();
+        rightBackground = ko.observable();
     }
 
     //var base = Object.inherit(KnockoutViewModel, SummaryHealthViewModel);

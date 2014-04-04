@@ -4,8 +4,13 @@
 	</div>
 	<div class='app-container'>
 		<div class='input-container'>
-			<input type='text' placeholder='enter color' class='input-control'/>
-			<input type='text' placeholder='enter color' class='input-control'/>
+			<input type='text' placeholder='enter color' class='input-control' data-bind="value: leftBackground"/>
+			<input type='text' placeholder='enter color' class='input-control' data-bind="value: rightBackground"/>
+		</div>
+
+		<div class='output-container'>
+			<div class='left-output-container single-output-container' data-bind="style: { background: leftBackground }"></div>
+			<div class='right-output-container single-output-container' data-bind="style: { background: rightBackground }"></div>
 		</div>
 	</div>
 </div>
