@@ -22,13 +22,13 @@ define(function (require) {
         
         //this.compliance1 = 'we';
         this.bgColor.subscribe(function(newValue) {
-            var hexValue = self.color.nameToHex(newValue);
+            var hexValue = self.color.nameToHex(newValue) || newValue;
             self.bgRGBValue = self.color.hexToRGB(hexValue);
             self.checkCompliance();
         });
 
         this.fgColor.subscribe(function(newValue) {
-            var hexValue = self.color.nameToHex(newValue);
+            var hexValue = self.color.nameToHex(newValue) || newValue;
             self.fgRGBValue = self.color.hexToRGB(hexValue);
             self.checkCompliance();
         });
