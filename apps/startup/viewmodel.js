@@ -44,25 +44,7 @@ define(function (require) {
     };
 
     viewmodel.prototype.initChart = function () {
-        $("#gaugeContainer").dxCircularGauge({
-    scale: {
-        ['a','b','c','d'];
-    },
-    value: 'c',
-    subvalues: ['c'],
-    rangeContainer: {
-        ranges: [{
-                startValue: 'a',
-                endValue: 'b',
-                color: 'blue'
-            }, {
-                startValue: 'c',
-                endValue: 'd',
-                color: 'red'
-            }
-        ]
-    }  
-});
+       
     };
 
     viewmodel.prototype.checkCompliance = function(){
